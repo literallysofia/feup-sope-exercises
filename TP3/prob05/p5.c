@@ -15,8 +15,15 @@ int main(void) {
 
         if (pid != 0)
                 printf("Hello ");
-        else
-                printf("world!\n");
+        else {
+                pid_t pid2 = fork();
+
+                if (pid2 != 0)
+                        printf("my ");
+                else
+                        printf("friends!\n");
+
+        }
 
         return 0;
 }

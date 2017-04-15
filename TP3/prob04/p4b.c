@@ -14,9 +14,9 @@ int main(void) {
         }
 
         if (pid != 0)
-                printf("Hello ");
-        else
                 printf("world!\n");
+        else
+                printf("Hello ");
 
         return 0;
 }
