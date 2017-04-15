@@ -6,10 +6,10 @@
 
 int main(void) {
         write(STDOUT_FILENO,"1",1);
-        if(fork() > 0) {
+        if(fork() > 0) { //processo pai
                 write(STDOUT_FILENO,"2",1);
                 write(STDOUT_FILENO,"3",1);
-        } else {
+        } else { //processo filho
                 write(STDOUT_FILENO,"4",1);
                 write(STDOUT_FILENO,"5",1);
         }

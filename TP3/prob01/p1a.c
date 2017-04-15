@@ -8,11 +8,11 @@ int global = 1;
 
 int main(void) {
         int local = 2;
-        if(fork() > 0) {
+        if(fork() > 0) { //pid do filho para o processo pai
                 printf("PID = %d; PPID = %d\n", getpid(), getppid());
                 global++;
                 local--;
-        } else {
+        } else { //para o processo filho
                 printf("PID = %d; PPID = %d\n", getpid(), getppid());
                 global--;
                 local++;
